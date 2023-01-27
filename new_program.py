@@ -21,17 +21,22 @@ def log(x, base):
     return math.log(x, base)
 
 
+def pow(num, y):
+    return math.pow(num, y)
+
+
 print("Select the operation.")
 print("1.Add")
 print("2.Subtract")
 print("3.Multiply")
 print("4.Divide")
 print("5.Log")
+print("6.Pow")
 
 while True:
-    choice = input("Enter choice(1/2/3/4/5): ")
+    choice = input("Enter choice(1/2/3/4/5/6): ")
 
-    if choice in ('1', '2', '3', '4', '5'):
+    if choice in ('1', '2', '3', '4', '5', '6'):
         try:
             a = float(input("Enter first number: "))
             b = float(input("Enter second number: "))
@@ -54,8 +59,11 @@ while True:
         elif choice == '5':
             print(log(a, b))
 
+        elif choice == '6':
+            print(pow(a, b))
+
         next_calculation = input("Let's do next calculation? (yes/no): ")
         if next_calculation == "no":
             break
     else:
-            print("Invalid Input")
+        print("Invalid Input")
