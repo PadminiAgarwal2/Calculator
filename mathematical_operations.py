@@ -33,9 +33,6 @@ print(add(x, y))
 print(subtract(x, y))
 print(multiply(x, y))
 print(divide(x, y))
-<<<<<<< HEAD:addition.py
-=======
-<<<<<<< HEAD
 
 
 # Expontial power of any number
@@ -43,5 +40,14 @@ base = int(input("enter base value "))
 exponent = int(input("enter exponent value "))
 print("Exponential Value is: ", base ** exponent)
 
->>>>>>> a6d157a2fd65005f009bd88077a7f9284072b234:mathematical_operations.py
 
+n=int(input("Enter value:"))
+fact=1
+if n<0:
+    print("sorry factorial does not exit")
+elif n==0:
+    print("The factorial of 0 and 1")
+else:
+    for i in range(1,n+1):
+      fact=fact*i
+      print("The factorial of",n,"is",fact)
