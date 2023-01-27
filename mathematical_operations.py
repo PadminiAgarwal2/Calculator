@@ -26,14 +26,10 @@ def divide(x, y):
     return quotient
 
 
-
-
-
 print(add(x, y))
 print(subtract(x, y))
 print(multiply(x, y))
 print(divide(x, y))
-
 
 # Expontial power of any number
 base = int(input("enter base value "))
@@ -41,13 +37,16 @@ exponent = int(input("enter exponent value "))
 print("Exponential Value is: ", base ** exponent)
 
 # Factorial no.
-n=int(input("Enter value:"))
-fact=1
-if n<0:
-    print("sorry factorial does not exit")
-elif n==0:
-    print("The factorial of 0 and 1")
-else:
-    for i in range(1,n+1):
-      fact=fact*i
-      print("The factorial of",n,"is",fact)
+num = int(input("Enter a number for factorial:"))
+
+
+def factorial(n):
+    return 1 if (n == 1 or n == 0) else n * factorial(n - 1);
+
+
+print("Factorial of", num, "is", factorial(num))
+
+# Take input a number from user
+num = int(input("Enter an any number: "))
+cube = num * num * num
+print("Cube of {0} is {1} ".format(num, cube))
