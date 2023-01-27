@@ -33,7 +33,7 @@ print(add(x, y))
 print(subtract(x, y))
 print(multiply(x, y))
 print(divide(x, y))
-
+5
 
 # Expontial power of any number
 base = int(input("enter base value "))
