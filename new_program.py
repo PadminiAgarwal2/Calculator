@@ -21,8 +21,12 @@ def log(x, base):
     return math.log(x, base)
 
 
-def pow(num, y):
+def squre(num, y):
     return math.pow(num, y)
+
+
+def cbrt(num, y):
+    return math.cbrt(num, y)
 
 
 print("Select the operation.")
@@ -31,12 +35,12 @@ print("2.Subtract")
 print("3.Multiply")
 print("4.Divide")
 print("5.Log")
-print("6.Pow")
-
+print("6.Square")
+print("7.Cbrt")
 while True:
-    choice = input("Enter choice(1/2/3/4/5/6): ")
+    choice = input("Enter choice(1/2/3/4/5/6/7): ")
 
-    if choice in ('1', '2', '3', '4', '5', '6'):
+    if choice in ('1', '2', '3', '4', '5', '6', '7'):
         try:
             a = float(input("Enter first number: "))
             b = float(input("Enter second number: "))
@@ -60,6 +64,9 @@ while True:
             print(log(a, b))
 
         elif choice == '6':
+            print(pow(a, b))
+
+        elif choice == '7':
             print(pow(a, b))
 
         next_calculation = input("Let's do next calculation? (yes/no): ")
