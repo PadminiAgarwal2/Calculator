@@ -51,3 +51,10 @@ else:
     for i in range(1,n+1):
       fact=fact*i
       print("The factorial of",n,"is",fact)
+
+# radian to degree code
+pi=22/7
+radian = float(input("Input radians: "))
+degree = radian*(180/pi)
+print(degree)
+      
