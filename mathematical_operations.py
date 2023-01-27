@@ -40,7 +40,7 @@ base = int(input("enter base value "))
 exponent = int(input("enter exponent value "))
 print("Exponential Value is: ", base ** exponent)
 
-
+# Factorial no.
 n=int(input("Enter value:"))
 fact=1
 if n<0:
