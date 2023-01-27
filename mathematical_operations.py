@@ -1,30 +1,46 @@
-x = int(input("Enter first number: "))
-y = int(input("Enter second number: "))
-
-
 def add(x, y):
     sum = x + y
     return sum
 
 
 def subtract(x, y):
-    if (x > y):
         difference = x - y
-        return difference
-    else:
-        difference = y - x
-        return difference
 
 
 def multiply(x, y):
     product = x * y
     return product
-
-
-def divide(x, y):
-    quotient = (x / y)
+def divide(x,y):
+    quotient =x/y
     return quotient
 
+
+
+print("Select operator")
+print("1.Add")
+print("2.Subract")
+print("3.multiply")
+print("4.Divide")
+
+if choice in ('1','2','3','4'):
+    try:
+        n=float(input("Enter first value:"))
+        n1=float(input("Enter second value:"))
+    except valueError:
+        print("Invalid input.Please enter a no.")
+        continue
+
+    if choice =='1':
+        print(n,"+",n1,"=",add(n,n1))
+    elif choice =='2':
+        print(n,"-",n1,"=", subtract(n,n1))
+    elif choice =='3':
+        print(n,"*",n1,"=",multiply(n,n1))
+    elif choice =='4':
+        print(n,"/",n1,divide(n,n1))
+        break
+else:
+    print("Invalid input")
 
 
 
