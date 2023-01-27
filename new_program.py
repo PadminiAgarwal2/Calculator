@@ -17,8 +17,8 @@ def divide(x, y):
     return x / y
 
 
-def log(a, base):
-    return math.log2(a)
+def log(x, base):
+    return math.log(x, base)
 
 
 print("Select the operation.")
@@ -52,10 +52,10 @@ while True:
             print(a, "/", b, "=", divide(a, b))
 
         elif choice == '5':
-            print(a, "/", b, "=", log(a, b))
+            print(log(a, b))
 
         next_calculation = input("Let's do next calculation? (yes/no): ")
         if next_calculation == "no":
             break
     else:
-        print("Invalid Input")
+            print("Invalid Input")
