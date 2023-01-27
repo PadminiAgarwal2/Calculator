@@ -1,52 +1,50 @@
-x = int(input("Enter first number: "))
-y = int(input("Enter second number: "))
-
-
 def add(x, y):
-    sum = x + y
-    return sum
+    return x + y
 
 
 def subtract(x, y):
-    if (x > y):
-        difference = x - y
-        return difference
-    else:
-        difference = y - x
-        return difference
+    return x - y
 
 
 def multiply(x, y):
-    product = x * y
-    return product
+    return x * y
 
 
 def divide(x, y):
-    quotient = (x / y)
-    return quotient
+    return x / y
 
 
-print(add(x, y))
-print(subtract(x, y))
-print(multiply(x, y))
-print(divide(x, y))
+print("Select the operation.")
+print("1.Add")
+print("2.Subtract")
+print("3.Multiply")
+print("4.Divide")
 
-# Expontial power of any number
-base = int(input("enter base value "))
-exponent = int(input("enter exponent value "))
-print("Exponential Value is: ", base ** exponent)
+while True:
+    choice = input("Enter choice(1/2/3/4): ")
 
-# Factorial no.
-num = int(input("Enter a number for factorial:"))
+    if choice in ('1', '2', '3', '4'):
+        try:
+            a = float(input("Enter first number: "))
+            b = float(input("Enter second number: "))
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+            continue
 
+        if choice == '1':
+            print(a, "+", b, "=", add(a, b))
 
-def factorial(n):
-    return 1 if (n == 1 or n == 0) else n * factorial(n - 1);
+        elif choice == '2':
+            print(a, "-", b, "=", subtract(a, b))
 
+        elif choice == '3':
+            print(a, "*", b, "=", multiply(a, b))
 
-print("Factorial of", num, "is", factorial(num))
+        elif choice == '4':
+            print(a, "/", b, "=", divide(a, b))
 
-# Take input a number from user
-num = int(input("Enter an any number: "))
-cube = num * num * num
-print("Cube of {0} is {1} ".format(num, cube))
+        next_calculation = input("Let's do next calculation? (yes/no): ")
+        if next_calculation == "no":
+            break
+    else:
+        print("Invalid Input")
