@@ -32,7 +32,7 @@ print(multiply(x, y))
 print(divide(x, y))
 5
 
-# Expontial power of any number
+# Exponential power of any number
 base = int(input("enter base value "))
 exponent = int(input("enter exponent value "))
 print("Exponential Value is: ", base ** exponent)
@@ -45,7 +45,7 @@ elif n == 0:
     print("The factorial of 0 and 1")
 else:
     for i in range(1, n + 1):
-        fact = fact * i
+        fact = fact * n
         print("The factorial of", n, "is", fact)
 
 # radian to degree code
