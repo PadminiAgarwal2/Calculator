@@ -26,13 +26,11 @@ def divide(x, y):
     return quotient
 
 
-def exp(x, y):
-    power = x ** y
-    return power
+
 
 
 print(add(x, y))
 print(subtract(x, y))
 print(multiply(x, y))
 print(divide(x, y))
-print(exp(x, y))
+
